@@ -1,0 +1,104 @@
+﻿<Page
+    x:Class="ClaroQueSi.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClaroQueSi"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:Claro.Models.REST"
+    xmlns:pagevm="using:ClaroQueSi.VM"
+    mc:Ignorable="d"
+    RequestedTheme="Dark"
+    Background="Black"
+    DataContext="{Binding MainPageInstance, Source={StaticResource Locator}}">
+
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="58"/>
+            <RowDefinition Height="47"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.4*"/>
+            </Grid.ColumnDefinitions>
+            <Image Margin="10,15,0,0" Source="/ImageResources/clarovideo-logo-sitio.png" VerticalAlignment="Top" HorizontalAlignment="Left" Width="125" Height="30"/>
+            <Button Grid.Column="4" HorizontalAlignment="Center" Margin="0,12,0,0" VerticalAlignment="Top" Background="#33000000" BorderBrush="{x:Null}" Width="55" Height="47">
+                <Image VerticalAlignment="Center" Margin="0,0,0,0" Source="/ImageResources/search.png" Height="35"/>
+            </Button>
+            <Grid Grid.Column="2" Margin="0,0,2,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="120"/>
+                </Grid.ColumnDefinitions>
+                <HyperlinkButton x:ConnectionId='4' x:Name="btnStart" Content="Inicio" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,10,0,0" Foreground="White" FontSize="22" Height="41"/>
+                <HyperlinkButton x:ConnectionId='5' x:Name="btnCatalog" Content="Catálogo" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Column="1" Foreground="White" FontSize="22" Height="41"/>
+                <HyperlinkButton x:ConnectionId='6' x:Name="btnGenre" Content="Géneros" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Column="2" Foreground="White" FontSize="22" Height="41"/>
+                <HyperlinkButton x:ConnectionId='7' x:Name="btnBuyRent" Content="Compra y Renta" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Column="3" Foreground="White" FontSize="22" Height="41"/>
+                <HyperlinkButton x:ConnectionId='8' x:Name="btnChannels" Content="Canales" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Column="4" Foreground="White" FontSize="22" Height="41"/>
+                <HyperlinkButton x:ConnectionId='9' x:Name="btnKids" Content="Kids" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,10,10,0" Grid.Column="5" Foreground="White" FontSize="22" Height="41"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" Margin="60,0,60,0" VerticalAlignment="Stretch">
+
+            <GridView x:ConnectionId='2' x:Name="gridMovies" ItemsSource="{Binding AllMovies}" IsItemClickEnabled="True"                                 >
+                <GridView.ItemTemplate>
+                    <DataTemplate                        >
+                        <StackPanel Margin="5,0,5,20">
+                            <Image Width="200" Height="300" >
+                                <Image.Source>
+                                    <BitmapImage UriSource="{Binding image_base_vertical}" />
+                                </Image.Source>
+                            </Image>
+                        </StackPanel>
+
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,0,0,0" VerticalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="0.9*"/>
+                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.6*"/>
+                <ColumnDefinition Width="0.6*"/>
+                <ColumnDefinition Width="0.9*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.6*"/>
+                <ColumnDefinition Width="0.6*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.9*"/>
+            </Grid.ColumnDefinitions>
+            <HyperlinkButton Content="Acción y Aventura" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="White" FontStretch="UltraCondensed" Height="32" />
+            <HyperlinkButton Content="Anime y Videojuegos" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="White" Grid.Column="1" Height="32"  />
+            <HyperlinkButton Content="Biográficas" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="White" Grid.Column="2" Height="32"  />
+            <HyperlinkButton Content="Ciencia Ficción" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="White" Grid.Column="3" Height="32"  />
+            <HyperlinkButton Content="Cine de Oro" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="White" Grid.Column="4" Height="32"  />
+            <HyperlinkButton Content="Clásicas" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="White" Grid.Column="5" Height="32"  />
+            <HyperlinkButton Content="Comedia" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="White" Grid.Column="6" Height="32"  />
+            <HyperlinkButton Content="Deportes" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="1,0,0,0" Foreground="White" Grid.Column="7" Height="32"  />
+            <HyperlinkButton Content="Documentales" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="White" Grid.Column="8" Height="32"  />
+            <HyperlinkButton Content="Drama" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="White" Grid.Column="9" Height="32"  />
+            <HyperlinkButton Content="Familiares" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="White" Grid.Column="10" Height="32"  />
+            <HyperlinkButton Content="Históricas" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="White" Grid.Column="11" Height="32"  />
+            <HyperlinkButton Content="Infantiles" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="White" Grid.Column="12" Height="32"  />
+            <HyperlinkButton Content="Latinoamericanas" HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="White" Grid.Column="13" Height="32"  />
+        </Grid>
+
+    </Grid>
+</Page>
+

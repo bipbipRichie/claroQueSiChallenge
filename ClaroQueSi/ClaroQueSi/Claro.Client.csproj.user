@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Source>C:\Users\BBRMX\Desktop\clarovideo-logo-sitio.png</Source>
+    <SmallTileSource>C:\Users\BBRMX\Desktop\clarovideo-logo-sitio.png</SmallTileSource>
+    <MediumTileSource>C:\Users\BBRMX\Desktop\clarovideo-logo-sitio.png</MediumTileSource>
+    <WideTileSource>C:\Users\BBRMX\Desktop\clarovideo-logo-sitio.png</WideTileSource>
+    <LargeTileSource>C:\Users\BBRMX\Desktop\clarovideo-logo-sitio.png</LargeTileSource>
+    <AppIconSource>C:\Users\BBRMX\Desktop\clarovideo-logo-sitio.png</AppIconSource>
+    <SplashScreenSource>C:\Users\BBRMX\Desktop\clarovideo-logo-sitio.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\BBRMX\Desktop\clarovideo-logo-sitio.png</PackageLogoSource>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,4 @@
+C:\Users\BBRMX\Desktop\AAAA\ClaroQueSi\Claro.Interface\Claro.Services.csproj;x86
+C:\Users\BBRMX\Desktop\AAAA\ClaroQueSi\Claro.Models\Claro.Models.csproj;x86
+C:\Users\BBRMX\Desktop\AAAA\ClaroQueSi\Claro.Models\Claro.Models.csproj;x86
+C:\Users\BBRMX\Desktop\AAAA\ClaroQueSi\Claro.UnitTests\Claro.UnitTests.csproj;x86
